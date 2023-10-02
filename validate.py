@@ -184,7 +184,7 @@ def checkCorrectNumFiles(filenames):
 def checkFileNames(filenames):
     # invalidFiles = []
     print("Checking File Names:")
-    pattern = r'^(Thingy|Respeck)_s\d+_[a-zA-Z]+_[a-zA-Z]+_(unprocessed|clean)_[0-9]{2}-[0-9]{2}-[0-9]{4}_[0-9]{2}-[0-9]{2}-[0-9]{2}\.csv$'
+    pattern = r'^(Thingy|Respeck)_s\d+_[a-zA-Z ]+_[a-zA-Z]+_(unprocessed|clean)_[0-9]{2}-[0-9]{2}-[0-9]{4}_[0-9]{2}-[0-9]{2}-[0-9]{2}\.csv$'
     for name in filenames:
         if not re.match(pattern, name):
             print(f'\tFile Found with Incorrect Naming Scheme: {name}')
